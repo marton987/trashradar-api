@@ -25,7 +25,7 @@ class ComplaintsTestCase(APITestCase):
         self.assertIn('id', returned_complaint, 'Id is not present on the result data')
         complaint = Entity.objects.get(pk=returned_complaint['id'])
 
-        self.assertEqual(complaint.counter, returned_entity['counter'], 'Name does not match')
+        self.assertEqual(complaint.counter, returned_complaint['counter'], 'Name does not match')
 
 
 class EntitiesTestCase(APITestCase):
